@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -29,17 +31,33 @@
             <img src="img/search.png" alt="">
         </div>
     </div>
-        <div class="navbar col">
-            <ul>
-                <li><a href="">Beranda</a></li>
-                <li><a href="">Tentang Del</a></li>
-                <li><a href="">Fasilitas</a></li>
-                <li><a href="">Program Pendidikan</a></li>
-                <li><a href="">Komunitas</a></li>
-                <li><a href="">Prestasi</a></li>
-            </ul>
-        </div>
-    <script src="js/index.js"></script>
+    <div class="navbar col">
+        <ul>
+            <li><a href="">Beranda</a></li>
+            <li><a href="">Pengumuman</a></li>
+            <li><a href="">Program Pendidikan</a></li>
+            <li><a href="">Fasilitas</a></li>
+            <li><a href="">Lembaga</a></li>
+        </ul>
+    </div>
+        <section aria-label="Newest Photos">
+            <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><img style="width: 50px ;" src="img/prev.png" alt=""></button>
+                <button class="carousel-button next" data-carousel-button="next"><img style="width: 50px ;" src="img/next.png" alt=""></button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="img/Hero.jpg" alt="#1">
+                    </li>
+                    <li class="slide">
+                        <img src="img/car2.jpg" alt="#2">
+                    </li>
+                    <li class="slide">
+                        <img src="img/car3.jpg" alt="#3">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>

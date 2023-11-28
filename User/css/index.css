@@ -1,3 +1,5 @@
+
+
 :root {
     --black: #000000;
     --purple: #461973;
@@ -12,7 +14,10 @@ body{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
+
 .col{ width: 100%; }
 .col-1{ width: 8.33333%; }
 .col-2{ width : 16.6666667%}
@@ -28,6 +33,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    /* background-color: red; */
 }
 
 /* Head */
@@ -74,6 +80,7 @@ body{
     flex-wrap: wrap;
     justify-content:center;
     background-color: var(--purple);
+    /* background-color: red; */
 }
 
 ul{
@@ -88,4 +95,72 @@ a {
     text-decoration: none;
     color: var(--white);
     font-size: 12px;
+}
+
+
+/* Carousel */
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.carousel{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: center;
+    /* background-color: red; */
+    /* background-size: contain; */
+}
+
+.slide[data-active]{
+    opacity: 1;
+}
+
+.carousel-button{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    /* padding: 0 .5rem; */
+
+}
+
+
+.carousel-button.prev{
+    left: 3rem;
+}
+
+.carousel-button.next{
+    right: 3rem;
 }
